@@ -1,0 +1,29 @@
+{
+  "nginx": {
+    "version": "1.2.3",
+    "default_site_enabled": true,
+    "source": {
+      "modules": ["http_gzip_static_module", "http_ssl_module"]
+    }
+  },
+	"java": {
+		"oracle": {
+			"accept_oracle_download_terms": true
+		}
+	},
+  "rbenv": {
+    "rubies": ["1.9.3-p392", "jruby-1.7.3"]
+  },
+  "maven":{
+    "version": "3"
+  },
+  "run_list": [
+    "recipe[nginx::source]",
+		"recipe[java::oracle]",
+    "recipe[ruby_build]",
+    "recipe[rbenv::system]",
+    "recipe[maven]",
+    "recipe[ark::default]"
+    
+  ]
+}

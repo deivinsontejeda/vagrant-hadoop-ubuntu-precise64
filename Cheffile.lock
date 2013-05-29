@@ -1,0 +1,55 @@
+SITE
+  remote: http://community.opscode.com/api/v1
+  specs:
+    apt (1.9.2)
+    ark (0.1.0)
+    build-essential (1.4.0)
+    chef_handler (1.1.4)
+    maven (0.16.2)
+      ark (>= 0.0.0)
+      java (>= 0.0.0)
+    ohai (1.1.8)
+    ruby_build (0.7.2)
+    runit (1.1.4)
+      build-essential (>= 0.0.0)
+      yum (>= 0.0.0)
+    windows (1.8.10)
+      chef_handler (>= 0.0.0)
+    yum (2.2.2)
+
+GIT
+  remote: git://github.com/opscode-cookbooks/nginx.git
+  ref: master
+  sha: 6807e46f27d7c3844227c7ffc0d36f0a58b89fd1
+  specs:
+    nginx (1.6.0)
+      apt (>= 0.0.0)
+      build-essential (>= 0.0.0)
+      ohai (>= 1.1.4)
+      runit (>= 0.0.0)
+      yum (>= 0.0.0)
+
+GIT
+  remote: git@github.com:fnichol/chef-rbenv.git
+  ref: master
+  sha: 3b1c59abc1134a50b0b8844954eca9a566aaffb8
+  specs:
+    rbenv (0.7.3)
+
+GIT
+  remote: git@github.com:opscode-cookbooks/java.git
+  ref: master
+  sha: e20ca6bde2196fef6dddd8c82e79a5dbab03c111
+  specs:
+    java (1.11.5)
+      windows (>= 0.0.0)
+
+DEPENDENCIES
+  ark (>= 0)
+  java (>= 0)
+  maven (>= 0)
+  nginx (>= 0)
+  rbenv (>= 0)
+  ruby_build (>= 0)
+  runit (>= 0)
+
