@@ -19,11 +19,11 @@
   },
   "run_list": [
     "recipe[nginx::source]",
-		"recipe[java::oracle]",
+    "recipe[java::oracle]",
     "recipe[ruby_build]",
     "recipe[rbenv::system]",
     "recipe[maven]",
-    "recipe[ark::default]"
-    
+    "recipe[ark::default]",
+	  "recipe[ant::default]"
   ]
 }
