@@ -12,7 +12,24 @@
 		}
 	},
   "rbenv": {
-    "rubies": ["1.9.3-p392", "jruby-1.7.3"]
+    "upgrade": "sync",
+    "rubies": ["2.0.0-p247", "1.9.3-p392"],
+    "global": "1.9.3-p392",
+    "user_installs": [
+      {
+        "user": "vagrant",
+        "rubies": ["2.0.0-p247", "1.9.3-p392"],
+        "global": "2.0.0-p247",
+        "gems": {
+          "2.0.0-p247": [
+            { "name": "bundler" }
+          ],
+          "1.9.3-p392": [
+            { "name": "bundler" }
+          ]
+        }
+      }
+    ]
   },
   "maven":{
     "version": "3"
@@ -21,7 +38,9 @@
     "recipe[nginx::source]",
     "recipe[java::oracle]",
     "recipe[ruby_build]",
-    "recipe[rbenv::system]",
+    "recipe[rbenv::default]",
+    "recipe[rbenv::user]",
+    "recipe[rbenv::user_install]",
     "recipe[maven]",
     "recipe[ark::default]",
 	  "recipe[ant::default]"
